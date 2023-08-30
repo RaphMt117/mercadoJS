@@ -66,19 +66,25 @@ const catalogo = [
 ]
 
 for (const produtoCatalogo of catalogo) {
-    const cartaoProduto = `
-    <div class='border-solid border-2 border-sky-500 w-48 m-2' id="card-produto-${produtoCatalogo.id}">
-        <img
-        src="./assets/img/${produtoCatalogo.imagem}"
-        alt="Produto 1 do Magazine Hashtag."
-        style="height: 300px"
-        />
+    const cartaoProduto = `<div class='border-solid border-2 border-slate-300 rounded-xl w-48 col-span-1 ' id="card-produto-${produtoCatalogo.id}">
+    
+    <img
+    src="./assets/img/${produtoCatalogo.imagem}"
+    alt="Produto ${produtoCatalogo.id} do MercadoJS."
+    class="h-[300px] rounded-2xl"
+    />
+    <div class="h-72 rounded-xl bg-gradient-to-b from-stone-200 to-slate-600 py-5">
 
-        <p class='marca'>${produtoCatalogo.marca}</p>
-        <p>${produtoCatalogo.nome}</p>
-        <p>$${produtoCatalogo.preco}</p>
+            <div class="text-base text-slate-800 font-medium text-center pt-3">
+            <p class='text-center font-medium text-slate-950 '>Marca: <a class="text-lg font-semibold text-gray-700" >${produtoCatalogo.marca} </a></p>
+            <div class="py-3">
+            <p class="text-lg text-slate-950 pb-3 font-semibold">${produtoCatalogo.nome}</p>
+            <p>R$${produtoCatalogo.preco}</p>
+            </div>
+            <button class="relative border-2 border-slate-600 rounded-full px-2 bg-slate-500 hover:scale-[102%]">Adicionar</button>
+            </div>
+        </div>
         
-        <button>Adicionar</button>
     </div>
 `
 
