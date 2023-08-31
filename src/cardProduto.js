@@ -12,14 +12,14 @@ export function renderizarCatalogo() {
 					class="rounded-xl shadow-lg z-10 group-hover:scale-[101%] duration-500 cursor-pointer" />
 				<div class="rounded-md">
 					<div class="text-slate-800 font-medium">
-						<p class="text-center font-medium text-slate-950">
+						<p class="text-center font-medium text-slate-950 pb-2">
 							Marca:
-							<a class="text-lg font-semibold text-slate-950">${produtoCatalogo.marca}</a>
+							<a class="text-lg font-semibold text-slate-950 mb-1">${produtoCatalogo.marca}</a>
 						</p>
-						<p class="text-lg text-slate-950 font-semibold">
+						<p class="text-lg text-slate-950 font-semibold ">
 							${produtoCatalogo.nome}
 						</p>
-						<p>R$${produtoCatalogo.preco}</p>
+						<p class="pt-2 pb-3">R$${produtoCatalogo.preco}</p>
 						<button
 							class="text-slate-200 bg-slate-950 w-full py-2 pt-3 align-middle rounded-md flex justify-center gap-3 hover:bg-slate-800">
 							<svg
