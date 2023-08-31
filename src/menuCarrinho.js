@@ -21,7 +21,7 @@ export function inicializarCarrinho() {
 export function adicionarAoCarrinho() {
 	const containerProdutorCarrinho =
 		document.getElementById('produtos-carrinho')
-	const cardProdutoCarrinho = html`
+	const cardProdutoCarrinho = /*html*/`
 		<article
 			class="flex rounded-lg bg-gradient-to-r from-slate-700 to-slate-900">
 			<button
@@ -50,7 +50,7 @@ export function adicionarAoCarrinho() {
 				<p class="text-slate-400 text-xs">Tamanho: M</p>
 				<p class="text-slate-400">R$70</p>
 			</div>
-		</article>
-	`
+		</article>`
+
 	containerProdutorCarrinho.innerHTML += cardProdutoCarrinho
 }

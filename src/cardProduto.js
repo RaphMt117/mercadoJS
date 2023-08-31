@@ -2,29 +2,26 @@ import {catalogo} from './util'
 
 export function renderizarCatalogo() {
 	for (const produtoCatalogo of catalogo) {
-		const cartaoProduto = html`
-			<div
-				class="border-solid border-2 border-slate-300 rounded-xl col-span-1 flex flex-col p-2 justify-between group"
+		const cartaoProduto = /*html*/ `
+            <div
+				class="border-solid border-2 border-gray-500 rounded-lg col-span-1 flex flex-col p-2 justify-between group bg-gray-200"
 				id="card-produto-${produtoCatalogo.id}">
 				<img
 					src="./assets/img/${produtoCatalogo.imagem}"
 					alt="Produto ${produtoCatalogo.id} do MercadoJS."
-					class="rounded-t-xl shadow-lg z-10 group-hover:scale-[102%] duration-300" />
-				<div
-					class="rounded-md bg-gradient-to-b from-stone-200 to-slate-300">
+					class="rounded-xl shadow-lg z-10 group-hover:scale-[101%] duration-500 cursor-pointer" />
+				<div class="rounded-md">
 					<div class="text-slate-800 font-medium">
 						<p class="text-center font-medium text-slate-950">
 							Marca:
-							<a class="text-lg font-semibold text-gray-700"
-								>${produtoCatalogo.marca}</a
-							>
+							<a class="text-lg font-semibold text-slate-950">${produtoCatalogo.marca}</a>
 						</p>
 						<p class="text-lg text-slate-950 font-semibold">
 							${produtoCatalogo.nome}
 						</p>
 						<p>R$${produtoCatalogo.preco}</p>
 						<button
-							class="text-slate-200 bg-slate-950 w-full py-2 pt-3 align-middle rounded-sm flex justify-center gap-3 hover:bg-slate-800">
+							class="text-slate-200 bg-slate-950 w-full py-2 pt-3 align-middle rounded-md flex justify-center gap-3 hover:bg-slate-800">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="20"
