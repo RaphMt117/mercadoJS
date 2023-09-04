@@ -1,3 +1,5 @@
+import {catalogo} from './util'
+
 // Funções para abrir e fechar carrinho
 function abrirCarrinho() {
 	document.getElementById('carrinho').classList.remove('right-[-384px]')
@@ -18,10 +20,11 @@ export function inicializarCarrinho() {
 }
 
 // Funções para adicionar e remover produtos do carrinho
-export function adicionarAoCarrinho() {
+export function adicionarAoCarrinho(idProduto) {
+	const produto = catalogo.find((p) => p.id === idProduto)
 	const containerProdutorCarrinho =
 		document.getElementById('produtos-carrinho')
-	const cardProdutoCarrinho = /*html*/`
+	const cardProdutoCarrinho = /*html*/ `
 		<article
 			class="flex rounded-lg bg-gradient-to-r from-slate-700 to-slate-900">
 			<button
@@ -42,13 +45,13 @@ export function adicionarAoCarrinho() {
 				</svg>
 			</button>
 			<img
-				src="./assets/img/product-1.jpg"
-				alt="{}"
+				src="./assets/img/${produto.imagem}"
+				alt="${produto.nome}"
 				class="h-24 " />
 			<div class="pl-1 pt-2">
-				<p class="text-white text-sm">Casaci Reto com Lã</p>
+				<p class="text-white text-sm">${produto.nome}</p>
 				<p class="text-slate-400 text-xs">Tamanho: M</p>
-				<p class="text-slate-400">R$70</p>
+				<p class="text-slate-400">R$${produto.preco}</p>
 			</div>
 		</article>`
 
