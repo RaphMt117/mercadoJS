@@ -94,8 +94,8 @@ function desenharProdutoNoCarrinho(idProduto) {
             <div class="flex text-slate-400 items-end absolute bottom-1 right-2 text-lg">
                 <button id="decrementar-produto-${produto.id}">-</button>
                 <p id="quantidade-${produto.id}" class= "ml-2 cursor-default">${
-					idsProdutoCarrinhoComQuantidade[produto.id]
-				}</p>
+		idsProdutoCarrinhoComQuantidade[produto.id]
+	}</p>
                 <button id="incrementar-produto-${
 					produto.id
 				}" class="ml-2">+</button>
